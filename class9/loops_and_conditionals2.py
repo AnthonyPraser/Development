@@ -31,17 +31,17 @@ Make sure to use break and/or continue.
 '''
 
 # For loop
-# colors = ['red', 'green', 'blue']
-# for c in colors:
-#     print(c)
+colors = ['red', 'green', 'blue']
+for c in colors:
+    print(c)
 
 # while loop
-# goal = 5
-# num = 0
+goal = 5
+num = 0
 
-# while num <= goal: 
-#     print("Not there yet", num)
-#     num += 1
+while num <= goal: 
+    print("Not there yet", num)
+    num += 1
 
 
 '''

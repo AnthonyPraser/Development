@@ -5,8 +5,8 @@
 # print(animal.capitalize())
 
 # # Count
-# vehicle = 'toyota'
-# print(vehicle.count('t'))
+vehicle = 'toyota'
+print(vehicle.count('t'))
 
 # # Casefold
 # animal = 'NEW YORK'
@@ -29,8 +29,8 @@
 # print(food.find('u'))
 
 # # Index
-drink = 'soda'
-print(drink.index('d'))
+# drink = 'soda'
+# print(drink.index('d'))
 
 
 # # isalnum
