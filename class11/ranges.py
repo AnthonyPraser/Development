@@ -9,11 +9,40 @@ Ranges
 
 # Using the range function, lets count to 20
 
+# x = range(20)
+
+'''
+range(start, stop, step)
+'''
+
+# for i in range(5,20,3): # stop paramenter
+#     print(i, end=' ')
+
+
+
+
+
+
+
+
+
 
 # using the range function, lets count from 10 to 80
 
+# for j in range(10,81):
+#     print(j, end= " ")
+
+
+
+
 
 # using the range function, lets count from 0 to 10 by increments of 2
+
+# for k in range(0,10,2):
+#     print(k, end=' ')
+
+
+
 
 
 # Lets examine the output! Try to visualize the output
@@ -21,7 +50,28 @@ Ranges
 
 # Write a range that is every five years from 1960 to 2000. Use it with a variable and without
 
+# for i in range(1960,2000,5):
+#     print(i, end=' ')
+
+
+
+
+
+
+
+
 # Write a range that counts down from 30 to 0
+
+# for i in range(30,0,-5):
+#     print(i, end=' ')
+
+
+
+
+
+
+
+
 
 '''
 Exercise:
@@ -33,6 +83,15 @@ Example:
 planets = ["mercury", "venus", "earth", "mars"]
 0: mercury, 1: venus, 2: earth, 3: mars
 '''
+# counter = 0
+# planets = ["mercury", "venus", "earth", "mars"]
+
+# for p in planets:
+#     print(f'{counter}: {p}', end=" ")
+#     counter +=1
+
+
+
 
 
 '''
@@ -48,6 +107,24 @@ Cynthia's job title is engineer.
 Abdul's job title is recruiter.
 
 '''
+
+employees = ['Bob', 'Cynthia', 'Abdul']
+job_titles = ['accountant', 'engineer', 'recruiter']
+
+my_stop_parameter = len(employees)
+
+for i in range(len(employees)):
+    employee = employees[i]
+    job_title = job_titles[i]
+
+    print(f"{employee} job title is {job_title}")
+    
+
+
+
+
+
+
 
 
 
