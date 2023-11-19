@@ -209,37 +209,84 @@ Hint: Make a list to store the sums, and a list to store the averages.
 
 # For Loop
 
-vegetables = ['broccoli', 'kale', 'onion', 'garlic', 'kale']
-short_vegetables = []
+# vegetables = ['broccoli', 'kale', 'onion', 'garlic', 'kale']
+# short_vegetables = []
 
-for v in vegetables:
-    if len(v) < 6:
-        short_vegetables.append(v)
-print(short_vegetables)
+# for v in vegetables:
+#     if len(v) < 6:
+#         short_vegetables.append(v)
+# print(short_vegetables)
     
 
 
 # List comprehension
 
+
+# new_list = [x for x in original_list if condition]
+
 # vegetables = ['broccoli', 'kale', 'onion', 'garlic', 'kale']
-# short_vegetables = []
+# short_vegetables = [v for v in vegetables if len(v) < 6]
+
+# print(short_vegetables)
+
+
+
 
 
 # Using a for loop, create a new list that contains any students without the letter j
 
 # For Loop
+
 # students = ['samuel', 'tanja', 'majestic', 'judith', 'julie']
+
+# students_without_letter_j = []
+
+
+# for s in students:
+#     if 'j' not in s:
+#         students_without_letter_j.append(s)
+# print(students_without_letter_j)
+
+
+
 
 
 # Using list comprehension, create a new list that contains any students without the letter j
+
 # List Comprehension - new_list = [x for x in original_list if condition]
+
 # students = ['samuel', 'majestic', 'judith', 'julie']
+
+# new_students = [s for s in students if 'j' not in s]
+
+# print(new_students)
+
+
+
+
+
 
 
 # List Comprehension - new_list = [expression for x in original_list]
+
 # original_list = [1, 2, 3, 4, 5, 6]
 
+# new_list = []
+
+# for o in original_list:
+#     new_list.append(o + 1)
+# print(new_list)
+
+
+
 # Using list comprehension, create new list with 1 added to each number (no append needed)
+
+# original_list_1 = [x + 1 for x in original_list]
+
+# print(original_list_1)
+
+
+
 
 
 
@@ -252,6 +299,29 @@ print(short_vegetables)
 # new_list = [34, 92, 2]
 '''
 
+# for loop
+
+# original_list = [34, 57, 81, 92, 2, 13]
+
+# new_list = []
+
+# for o in original_list:
+#     if o % 2 == 0:
+#         new_list.append(o)
+# print(new_list)
+
+# List comprehension
+
+# new_list = [o for o in original_list if o % 2 == 0]
+
+# print(new_list)
+
+
+
+
+
+
+
 '''
 # Exercise
 
@@ -263,7 +333,20 @@ print(short_vegetables)
 # Output: ['Dominic', 'Simone']
 
 '''
+over_60_years = ['Dominic', 'Linda', 'Simone', 'Swathi', 'Olaf']
+over_5_purchases = ['Finn', 'Simone', 'Aaron', 'Dominic']
 
+# customer_discount = []
+
+# for c in over_60_years:
+#     if c in over_5_purchases:
+#         customer_discount.append(c)
+# print(customer_discount)
+
+
+customer_discount = [i for i in over_60_years if i in over_5_purchases]
+
+print(customer_discount)
 
 
 
