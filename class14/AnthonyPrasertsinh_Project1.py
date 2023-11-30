@@ -113,6 +113,18 @@ while True:
 
 print("Sign up successful")
 
+# Logging in
+
+user_sign_in_username = input("Log in - Username:  ")
+user_sign_in_password = input("Log in - Password:  ")
+
+if user_input_username == user_sign_in_username and user_input_password == user_sign_in_password:
+
+    print("login successful")
+
+else:
+    print("Incorrect username or password")
+
 
     
 
