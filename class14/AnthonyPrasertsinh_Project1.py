@@ -39,18 +39,18 @@
 # taken_usernames = ['admin', 'admin123', 'root']
 # contain_letters = (user_input_username.isalpha())
 
-taken_usernames = ['judith', 'robin', 'mohammad']
+# taken_usernames = ['judith', 'robin', 'mohammad']
 
-while True:
-    # get the inputs
-    username = input('what is your first name ')
-    # password = input("what is your password ")
-    print(username)
-    # print(password)
+# while True:
+#     # get the inputs
+#     username = input('what is your first name ')
+#     # password = input("what is your password ")
+#     print(username)
+#     # print(password)
     
   
 
-    # do your username testing
+#     # do your username testing
 
 
 
@@ -59,6 +59,52 @@ while True:
 
     
 
+
+
+
+
+
+
+
+# user_input_username = input("Username: ")
+# user_input_password = input("Password: ")
+# taken_usernames = ['admin', 'admin123', 'root']
+
+
+
+
+while True:
+
+    user_input_username = input("Username: ")
+
+    start_uppercase = user_input_username[0]
+
+    if start_uppercase.isupper():
+        print("I'm a uppercase letter")
+
+
+        
+
+    taken_usernames = ['admin', 'admin123', 'root']
+
+    if user_input_username in taken_usernames:
+        print("Invalid taken username")
+
+        continue
+
+    
+
+    
+
+
+
+    
+
+    
+
+        
+   
+    
     
     
 

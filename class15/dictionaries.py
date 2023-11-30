@@ -194,20 +194,25 @@ Write a dictionary that contains five words and their definitions. Then have you
 Hint: Use the items() method
 
 '''
+# cars = {"Honda": "accord", "Nissian": "Sentra", "Jeep": "Patriot",}
 
+# for key, value in cars.items():
+#     print(key, value)
 
 # As datasets, we can use bracket notation
 
 # choices = {"flavors":['strawberry', 'vanilla', 'orange'],
 #            "sizes":['large', 'medium', 'small']}
 
+# print(choices["flavors"][0])
+# print(choices["sizes"][1])
 
 '''
 Exercise
 Create a dictionary for an automobile including make, model, year, number of doors, and number of cylinders.
 
 '''
-
+# cars = {"make": "honda", "model": "accord", "year": 2000, "number of doors": 4, "number of cylinders": 2}
 
 
 '''
@@ -216,7 +221,24 @@ For example, in this list: [1,2,4,1,3,4,1,1] the mode is 1
 Write some code that uses a dictionary to calculate the mode of a list.
 
 '''
+my_list = [1,2,4,1,3,4,1,1]
 
+output = {}
+
+# for m in my_list:
+#     if m in output:
+#         output[m] += 1 # incrementing the count
+#     else:
+#         output[m] = 1 # add it initially 
+# print(output)
+
+# for m in my_list:
+#     output[m] = my_list.count(m) # can increment and update
+# print(output)
+
+# statistics module
+# find_my_mode = [1,2,4,1,3,4,1,1,2]
+# result =
 
 
 '''
@@ -229,17 +251,32 @@ records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
 Output: {'manager': 50000, 'developer': 62500}
 '''
 
+records = [{'name': 'Bob', 'title': 'manager', 'salary': 50000},\
+           {'name': 'Alice', 'title': 'developer', 'salary': 60000},\
+           {'name': 'David', 'title': 'developer', 'salary': 65000}]
 
 
 
 
+output = {}
+
+# iterate through records and create 2 new list to seperate devs and managers
+mgr_list = [i for i in records if (i['title'] == 'manager')]
+# print(mgr_list)
+
+dev_list = [i for i in records if (i['title'] == 'developer')]
+# print(dev_list)
 
 
+# loop for the average salaries 
+mgr_average_salary = sum(s['salary'] for s in mgr_list) / len(mgr_list)
+dev_average_salary = sum(s['salary'] for s in dev_list) / len(dev_list)
 
- 
 
+output.update({"Manager": mgr_average_salary})
+output.update({"Developer": dev_average_salary})
 
-
+print(output)
 
 
 
