@@ -4,7 +4,7 @@ username_requirments = "Username Requirements: It must start with a lowercase le
 print(username_requirments)
 
 password_requirments = "Password Requirements: At least 8 characters long, contains at least one uppercase letter, contains at least one lowercase letter, contains at least one digit, contains at least one of these characters: !, ?, @, #, $, ^, &, *, _, -, and doesn't contain any spaces."
-# print(password_requirments)
+print(password_requirments)
 
 
 
