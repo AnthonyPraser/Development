@@ -109,7 +109,14 @@ while True:
 
     print(f"Does password contain spaces: {contain_spaces_password}")
 
-    continue
+    break
+
+print("Sign up successful")
+
+
+    
+
+  
 
 
     
