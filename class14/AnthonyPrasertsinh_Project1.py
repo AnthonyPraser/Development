@@ -70,6 +70,7 @@
 # user_input_password = input("Password: ")
 # taken_usernames = ['admin', 'admin123', 'root']
 
+import re
 
 
 
@@ -80,7 +81,7 @@ while True:
     start_uppercase = user_input_username[0]
 
     if start_uppercase.isupper():
-        print("I'm a uppercase letter")
+        print("Invalid username: It must start with a lowercase letter")
 
 
         
@@ -88,7 +89,7 @@ while True:
     taken_usernames = ['admin', 'admin123', 'root']
 
     if user_input_username in taken_usernames:
-        print("Invalid taken username")
+        print("Username taken")
 
         continue
 
