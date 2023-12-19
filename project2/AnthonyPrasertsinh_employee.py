@@ -18,8 +18,7 @@ Test organize and document your class
 class Point2d:
 
      # constructor with __init__
-    def __init__(self, name = "", job_title = "", 
-                 department = "", salary = 0.0, hire_year = 0):
+    def __init__(self, name = "", job_title = "", department = "", salary = 0.0, hire_year = 0):
         self.name = name
         self.job_title = job_title
         self.department = department
@@ -30,7 +29,7 @@ class Point2d:
         
     # Magic methods
     def __str__(self):
-          return f"Name: {self.name}, Job Title: {self.job_title}, Department: {self.department}"
+          return f"Name: {self.name}, Job Title: {self.job_title}, Department: {self.department}, Salary: {self.salary}, hire_year: {self.hire_year} "
 
     def __sub__(self, other):
           return Point2d(self.hire_year - other.hire_year)
@@ -78,9 +77,6 @@ class Point2d:
 employee_info = Point2d("Anthony", "Opeartor", "Vitals", 35.000, 2022)
 
 
-# print(employee_info)
-
-
 # Printing Accessor method 
 # print(employee_info.get_name())
 # print(employee_info.get_job_title())
@@ -92,9 +88,12 @@ employee_info = Point2d("Anthony", "Opeartor", "Vitals", 35.000, 2022)
 # print(employee_info)
 # employee_info.set_name("Jean")
 # print(employee_info)
-print(employee_info)
+
 
 # Printing years worked
+
+
+
 
 
 

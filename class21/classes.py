@@ -85,8 +85,8 @@ my_second_point = Point2d(11, 10)
 my_fifth_point = Point2d(50, 100)
 
 # Printing after adding __str__ magic method
-print(my_first_point)
-print(my_second_point)
+# print(my_first_point)
+# print(my_second_point)
 
 # Equality __eq__
 
@@ -97,8 +97,8 @@ print(my_second_point)
 # print(my_third_point)
 
 # Subtraction __sub__
-# my_fourth_point = my_first_point - my_second_point
-# print(my_fourth_point)
+my_fourth_point = my_first_point - my_second_point
+print(my_fourth_point)
 
 # Less than __lt__
 # print(my_first_point < my_second_point)
