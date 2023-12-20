@@ -31,25 +31,29 @@ class Point2d:
     def __str__(self):
           return f"Name: {self.name}, Job Title: {self.job_title}, Department: {self.department}, Salary: {self.salary}, hire_year: {self.hire_year} "
 
-    def __sub__(self, other):
-          return Point2d(self.hire_year - other.hire_year)
+    def years_worked(self):
+        pass
+        
+         
           
                
      # Accessor methods
     def get_name(self):
-          return self.name
+      return self.name
+
+
 
     def get_job_title(self):
-          return self.job_title
+      return self.job_title
 
     def get_department(self):
-          return self.department
+      return self.department
 
     def get_salary(self):
-          return self.salary
+      return self.salary
 
     def get_hire_year(self):
-          return self.hire_year
+      return self.hire_year
     
     
     # Mutator methods
@@ -76,6 +80,10 @@ class Point2d:
 # Class object or instance created 
 employee_info = Point2d("Anthony", "Opeartor", "Vitals", 35.000, 2022)
 
+# print(employee_info)
+
+
+
 
 # Printing Accessor method 
 # print(employee_info.get_name())
@@ -91,6 +99,11 @@ employee_info = Point2d("Anthony", "Opeartor", "Vitals", 35.000, 2022)
 
 
 # Printing years worked
+
+
+
+
+
 
 
 
