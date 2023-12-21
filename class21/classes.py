@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 
 '''
 Classes
@@ -14,18 +14,54 @@ class Date:
         self.year = year
         self.month = month
         self.day = day
-    
+
+    # __str__ this is what the user will see if they use the print built in function
     def __str__(self):
-        pass
+        return f"{self.month:02d}/{self.day:02d}/{self.year}"
+        
 
     def __eq__(self, other):
-        pass
+        if self.year == other.year and self.month == other.month and self.year == other.year:
+            return True
+        return False
+        
 
     def __lt__(self, other):
-        pass
+        selfdate = datetime(self.year, self.month, self.day)
+        otherdate = datetime(other.year, other.month, other.day)
+        if selfdate < otherdate:
+            return True
+        return False
+        
 
     def is_leap_year(self):
-         pass
+          
+          return True if self.year % 4 == 0 and (self.year % 100  != 0 or self.year % 400 == 0) else False
+         
+         
+    
+# Sample data
+sample_date = Date()
+date1 = Date(1985, 5, 19)
+date2 = Date(2001, 10, 3)
+
+# tested with __str__
+# print(sample_date)
+# print(date1)
+# print(date2)
+
+# testing __eq__
+# print(date1 == date2)
+
+# testing __it__
+# print(date1 < date2)
+
+# print(date1.is_leap_year())
+# print(date2.is_leap_year())
+
+
+
+
 
 
 
@@ -97,8 +133,8 @@ my_fifth_point = Point2d(50, 100)
 # print(my_third_point)
 
 # Subtraction __sub__
-my_fourth_point = my_first_point - my_second_point
-print(my_fourth_point)
+# my_fourth_point = my_first_point - my_second_point
+# print(my_fourth_point)
 
 # Less than __lt__
 # print(my_first_point < my_second_point)
@@ -111,6 +147,11 @@ print(my_fourth_point)
 # print(my_first_point.get_y())
 # print(my_second_point.get_y())
 # print(my_fifth_point.get_y())
+
+# Lets look at default parameters
+# default_object = Point2d()
+# print(default_object)
+
 
 # Mutator method
 # print(my_fifth_point)
@@ -125,12 +166,63 @@ print(my_fourth_point)
 
     
 
+class Dog:
+    # Our constructor
+
+    def __init__(self, name, birth_year, breed):
+        self.name = name
+        self.birth_year = birth_year
+        self.breed = breed
+
+    # String representation, this is what happens
+    def __str__(self):
+        return f'Name: {self.name}\nBirth year:{self.birth_year}\nBreed: {self.breed}'
+    
+    # This function will calculate the dog's human age
+    def human_age(self):
+        today = datetime.datetime.now()
+        year = today.year
+        return year - self.birth_year
+    
+    # This is using the return value from human_age(), we can make the function call, in another function 
+    def show_results_from_another_function(self):
+        return 100 * self.human_age()
+    
+    def dog_years(self):
+        dogyears = 7 * self.human_age()
+        return f'{self.name} is {dogyears} years old'
+        
+
+    
+
+
+dog1 = Dog('fluffy', 2020, 'chihuhua')
+dog2 = Dog('chino', 2015, 'japanese chin')
+dog3 = Dog('fido', 2018, 'doberman')
+
+
+# print(dog1)
+# print(dog2)
+# print(dog3)
+
+# Human age
+# print(dog1.human_age())
+
+
+# testing call from another function 
+print(dog1.show_results_from_another_function())
 
 
 
 
+today = datetime.datetime.now()
+year = today.year
+month = today.month
+day = today.day
 
-
+# print(year)
+# print(month)
+# print(day)
 
 
 
