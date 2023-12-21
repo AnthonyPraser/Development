@@ -15,10 +15,10 @@ Test organize and document your class
 
 # Employee Class
 
-class Point2d:
+class Employee:
 
      # constructor with __init__
-    def __init__(self, name = "", job_title = "", department = "", salary = 0.0, hire_year = 0):
+    def __init__(self, name, job_title, department, salary, hire_year):
         self.name = name
         self.job_title = job_title
         self.department = department
@@ -32,7 +32,16 @@ class Point2d:
           return f"Name: {self.name}, Job Title: {self.job_title}, Department: {self.department}, Salary: {self.salary}, hire_year: {self.hire_year} "
 
     def years_worked(self):
-        pass
+         today = datetime.datetime.now()
+         year = today.year
+         return year - self.hire_year
+    
+    def total_expense(self):
+        return self.salary * self.years_worked()
+        
+        
+       
+      
         
          
           
@@ -40,8 +49,6 @@ class Point2d:
      # Accessor methods
     def get_name(self):
       return self.name
-
-
 
     def get_job_title(self):
       return self.job_title
@@ -77,29 +84,33 @@ class Point2d:
          
 
 
-# Class object or instance created 
-employee_info = Point2d("Anthony", "Opeartor", "Vitals", 35.000, 2022)
+# Class object or instance created
+employee_info = Employee("Anthony", "Opeartor", "Vitals", 35.000, 2022)
 
-# print(employee_info)
+# Printing employee information 
+print(employee_info)
 
 
+# Printing years worked
+print(f"Years worked: {employee_info.years_worked()}")
+
+
+# Printing total salary expense
+print(f"Total salary expense: {employee_info.total_expense()}")
 
 
 # Printing Accessor method 
 # print(employee_info.get_name())
 # print(employee_info.get_job_title())
 # print(employee_info.get_department())
-# print(employee_info.get_hire_year())
 # print(employee_info.get_salary())
+# print(employee_info.get_hire_year())
+
 
 # Printing Mutator method
 # print(employee_info)
 # employee_info.set_name("Jean")
 # print(employee_info)
-
-
-# Printing years worked
-
 
 
 
