@@ -6,15 +6,15 @@ class BankAccount:
     
 
     # Init Function
-    def __init__(self, owner, balance):
+    def __init__(self, owner, balance = 0):
         self.owner = owner
         self.balance = balance
-        pass
+        self.transactions = []
 
 
-    # # __str__
-    # def __str__(self):
-    #     pass
+    # __str__
+    def __str__(self):
+        return f"Owner: {self.owner}\nOpening Balance: {self.balance}"
 
 
     # # deposit_funds()
@@ -50,8 +50,10 @@ class BankAccount:
     # def save_transaction(self):
     #     pass
 
+# Create my class instance 
 my_bank_account = BankAccount("Anthony", 4000)
 
+# Testing __str__
 print(my_bank_account)
 
 
