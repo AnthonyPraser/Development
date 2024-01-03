@@ -17,9 +17,12 @@ class BankAccount:
         return f"Owner: {self.owner}\nOpening Balance: {self.balance}"
 
 
-    # # deposit_funds()
-    # def deposit_funds(self):
-    #     pass
+    # deposit_funds()
+    def deposit_funds(self, amount):
+        t = {'owner': self.owner, 'type': 'deposit', 'amount': {amount}}
+        self.transactions.append(t)
+        return self.transactions
+        
 
     # # withdraw_funds()
     # def withdraw_funds(self):
@@ -51,10 +54,16 @@ class BankAccount:
     #     pass
 
 # Create my class instance 
-my_bank_account = BankAccount("Anthony", 4000)
+anthony_account = BankAccount("Anthony", 4000)
+
 
 # Testing __str__
-print(my_bank_account)
+# print(my_bank_account)
+
+# Testing deposit
+anthony_account.deposit_funds(50)
+anthony_account.deposit_funds(200)
+anthony_account.deposit_funds(300)
 
 
 
