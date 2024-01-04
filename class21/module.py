@@ -24,9 +24,13 @@ class BankAccount:
         return self.transactions
         
 
-    # # withdraw_funds()
-    # def withdraw_funds(self):
-    #     pass
+    # withdraw_funds()
+    def withdraw_funds(self, amount):
+        t = {'owner': self.owner, 'type': 'withdrawal', 'amount': {amount}}
+        self.transactions.append(t)
+        return self.transactions
+
+        
 
 
     # # get_balance()
@@ -65,6 +69,10 @@ anthony_account.deposit_funds(50)
 anthony_account.deposit_funds(200)
 anthony_account.deposit_funds(300)
 
+# Testing withdraw
+anthony_account.withdraw_funds(100)
+anthony_account.withdraw_funds(20)
+anthony_account.withdraw_funds(150)
 
 
 
