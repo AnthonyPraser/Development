@@ -64,19 +64,24 @@ class BankAccount:
     def get_transaction(self):
         print(self.transactions)
 
+    # transaction_count()
     def get_transaction_count(self):
-        print(len(self.transactions))
+        print(f'You have {len(self.transactions)} transaction.')
         
 
 
-    # # transaction_count()
-    # def get_transaction(self):
-    #     pass
+ 
 
 
-    # # transaction_history()
-    # def transaction_history(self):
-    #     pass
+  # transaction_history()
+    def get_transaction_history(self):
+        type = [s['type'] for s in self.transactions]
+        amt = [s['amount'] for s in self.transactions]
+        for acct_type, acct_amt in zip(type, amt):
+            print(f'{acct_type} in the amount of {acct_amt}')
+
+     
+        
 
 
     # # save_transaction()
@@ -102,13 +107,16 @@ anthony_account.withdraw_funds(200)
 anthony_account.withdraw_funds(100)
 
 # Testing get balance
-anthony_account.get_balance()
+# anthony_account.get_balance()
 
 # Testing get transactions
-anthony_account.get_transaction()
+# anthony_account.get_transaction()
 
 # Testing transaction count
-anthony_account.get_transaction_count()
+# anthony_account.get_transaction_count()
+
+# Testing transaction history
+anthony_account.get_transaction_history()
 
 
 
