@@ -84,9 +84,17 @@ class BankAccount:
         
 
 
-    # # save_transaction()
-    # def save_transaction(self):
-    #     pass
+    # save_transaction()
+    def save_transaction(self):
+        os.chdir(os.path.dirname(os.path.abspath(__file__))) # file will be saved in the same directory
+        df = pd.DataFrame(self.transactions)
+        df.to_csv('transaction_list.csv', index=False, sep='\t')
+
+
+
+
+
+
 
 # Create my class instance 
 anthony_account = BankAccount("Anthony", 4000)
@@ -116,7 +124,10 @@ anthony_account.withdraw_funds(100)
 # anthony_account.get_transaction_count()
 
 # Testing transaction history
-anthony_account.get_transaction_history()
+# anthony_account.get_transaction_history()
+
+# Testing save transaction 
+anthony_account.save_transaction()
 
 
 
